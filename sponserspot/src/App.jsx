@@ -7,6 +7,8 @@ import LoginPageForSponser from "./view/sponser/auth/Login"
 import { RegisterPageForOrganizer } from "./view/organizer/OrganizerRegister"
 import LoginPageForOrganizer from "./view/organizer/organizerLogin"
 import CreateEventPage from "./view/Event/CreateEvent"
+import { ViewEvents } from "./view/Event/ViewEvents"
+import { EventDetail } from "./view/Event/EventDetal"
 
 
 function App() {
@@ -22,6 +24,8 @@ function App() {
       <Route path="/organizer/register" element={<RegisterPageForOrganizer/>}/>
       <Route path="/organizer/login" element={<LoginPageForOrganizer/>}/>
       <Route path="/organizer/create" element={<CreateEventPage/>}/>
+      <Route path="/sponser/events" element={<ViewEvents/>}/>
+      <Route path="/sponser/events/:id" element={<EventDetail/>}/>
 
 
     </Routes>

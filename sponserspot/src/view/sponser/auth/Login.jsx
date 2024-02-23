@@ -26,7 +26,7 @@ export default function LoginPageForSponser (){
 
             {/* login form */}
         <div className="min-h-screen w-1/2 flex flex-col justify-center items-center mx-12 " >
-            <h1 className="text-4xl text-purple-400 font-semibold" >SponserSpot  hai </h1>
+            <h1 className="text-4xl text-purple-400 font-semibold" >SponsorSpot  </h1>
             <p className="mt-1 font-normal text-zinc-500" >Please fill the required information</p>
 
     <div>

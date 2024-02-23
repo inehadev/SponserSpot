@@ -15,7 +15,7 @@ export default function NavBar () {
             <div className="flex justify-center items-center gap-4 text-white" >
                 <p>Home</p>
                 <p>Events</p>
-                <p>Sponsere</p>
+                <p>Sponsors</p>
             </div>
 
 

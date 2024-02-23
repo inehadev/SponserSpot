@@ -16,15 +16,16 @@ export const RegisterPageForOrganizer = ()=> {
     return (
         <div className="min-h-screen w-full bg-zinc-950">
             <div className="flex" >
-                {/* image section for register page */}
+              
                 <div className="min-h-screen w-[650px] bg-zinc-800" >
+                <img src="eventregister.png" alt=" img" />
                     <div className=" bg-white mx-4 my-4" ></div>
                 </div>
 
 
                 {/* register form */}
             <div className="min-h-screen w-1/2 flex flex-col justify-center items-center mx-12 " >
-                <h1 className="text-4xl text-purple-400 font-semibold" >SponserSpot</h1>
+                <h1 className="text-4xl text-purple-400 font-semibold" >SponsorSpot</h1>
                 <p className="mt-1 font-normal text-zinc-500" >Please fill the required information</p>
 
         <div>

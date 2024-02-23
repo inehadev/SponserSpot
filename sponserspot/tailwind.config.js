@@ -7,7 +7,9 @@ export default {
   theme: {
     extend: {
       backgroundImage:{
-        'mainPage':'url(/homepage.svg)'
+        'mainPage':'url(/homepage.svg)',
+        'home':'url(/home.jpg)',
+        'hero':'url(/person.svg)'
       }
     },
   },
