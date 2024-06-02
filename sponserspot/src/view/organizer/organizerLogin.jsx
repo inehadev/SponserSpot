@@ -1,7 +1,9 @@
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../../contexts/authContext";
+import { useNavigate ,Link } from "react-router-dom";
 
 export default function LoginPageForOrganizer (){
+    const navigate= useNavigate();
     const {loginForOrganizer} = useContext(AuthContext);
 
     const [email , setemail] = useState('');
@@ -10,7 +12,9 @@ export default function LoginPageForOrganizer (){
 
     const handleLogin = async (e)=>{
         e.preventDefault();
+       
         await loginForOrganizer(email , password)
+        navigate('/sponsor/dashboard')
     }
 
 
@@ -19,8 +23,10 @@ export default function LoginPageForOrganizer (){
         <div className="min-h-screen w-full bg-zinc-950">
         <div className="flex" >
             {/* image section for login page */}
-            <div className="min-h-screen w-[650px] bg-zinc-800" >
-                <div className=" bg-white mx-4 my-4" ></div>
+            <div className="min-h-screen w-[650px]" >
+                <div className=" " >
+                <img className="mt-20 ml-12" src="/eventregister.png" />
+                </div>
             </div>
 
 
@@ -64,7 +70,7 @@ export default function LoginPageForOrganizer (){
             </div>
 
 
-            <button className="w-full bg-purple-600 h-10 rounded-lg text-white" type="submit">Login</button>
+            <button className="w-full bg-purple-600 h-10 rounded-lg text-white" type="submit" >Login</button>
           <div className="w-full flex items-center justify-center">
           <p className="text-zinc-300">Don't have an account? <span className="text-purple-500" ><a href="/organizer/register">Register</a></span> </p>
           </div>

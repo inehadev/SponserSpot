@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react"
 import { AuthContext } from "../../../contexts/authContext";
+import { Link, useNavigate } from "react-router-dom";
 
 export const RegisterPageForSponser = ()=> {
     const{registerforSponser} = useContext(AuthContext);
@@ -11,6 +12,7 @@ export const RegisterPageForSponser = ()=> {
     const [email , setemail]=useState("");
     const[password,setpassowrd]=useState("");
     const[address,setaddress]=useState("");
+    const navigate = useNavigate();
 
     const handleLogin = async (e)=>{
         e.preventDefault();
@@ -20,9 +22,11 @@ export const RegisterPageForSponser = ()=> {
     return (
         <div className="min-h-screen w-full bg-zinc-950">
             <div className="flex" >
-                {/* image section for register page */}
-                <div className="min-h-screen w-[650px] bg-zinc-800" >
-                    <div className=" bg-white mx-4 my-4" ></div>
+                
+                <div className="min-h-screen w-[650px] " >
+                    <div className=" " >
+                    <img  className=" min-h-screen w-[650px] bg-transparent rounded-md  ml-8"  src="/sponsorRegister-.png"></img>
+                    </div>
                 </div>
 
 
@@ -32,7 +36,7 @@ export const RegisterPageForSponser = ()=> {
                 <p className="mt-1 font-normal text-zinc-500" >Please fill the required information</p>
 
         <div>
-            <form onSubmit={handleLogin} className="flex flex-col mt-6 " >
+            <form onSubmit={handleLogin } className="flex flex-col mt-6 " >
 
             <div className=" flex flex-col gap-4">
                
@@ -111,7 +115,8 @@ export const RegisterPageForSponser = ()=> {
                 }}></input>
                 </div>
 
-                <button  className="w-full bg-purple-600 h-10 rounded-lg text-white" type="submit">Register</button>
+                <button  className="w-full bg-purple-600 h-10 rounded-lg text-white" type="submit" > <Link to ='/sponser/login'>Register</Link> </button>
+               
           <div className="w-full flex items-center justify-center">
           <p className="text-zinc-300">Already have an account? <span className="text-purple-500" ><a href="/sponser/login">Login</a></span> </p>
           </div>

@@ -79,8 +79,80 @@ const getAllEvents = async () =>{
             console.log(error);
         }
     }
+
+
+    const postResponse = async  (event , message)=>{
+        try {
+
+            const token = localStorage.getItem('x-auth-token');
+
+            const axiosheader = {
+                headers:{
+                    "Accept":"application/json",
+                    "x-auth-token":token
+                }
+            }
+            const bodyParameter = {
+                message:message,
+                event:event
+            }
+
+            const res = await axios.post("http://localhost:2000/events/response/" , bodyParameter , axiosheader);
+            console.log(res.data);
+            alert("event Submitted");
+            
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+
+    const getEventUser = async ()=>{
+       try {
+        const token = localStorage.getItem('x-auth-token');
+        console.log(token);
+        const axiosheader = {
+            headers:{
+                "Accept":"application/json",
+                "x-auth-token":token
+            }
+        }
+
+        const res = await axios.get("http://localhost:2000/organizer/events" , axiosheader);
+        console.log(res.data);
+        return res.data;
+       } catch (error) {
+        console.log(error);
+       }
+
+    
+       
+
+
+    }
+
+
+
+    const resPonsewithEventId = async (eventId)=>{
+        try {
+            const token = localStorage.getItem('x-auth-token');
+            const axiosheader = {
+                headers:{
+                    "Accept":"application/json",
+                    "x-auth-token":token
+                }
+            }
+
+            const res = await axios.get("http://localhost:2000/response/"+eventId , axiosheader);
+            return res.data;
+        } catch (error) {
+            console.log(error);
+        }
+
+    }
+
 return (
- <EventContext.Provider value={{createEvent , getAllEvents , getEventWithId}} >
+ <EventContext.Provider value={{createEvent , getAllEvents , getEventWithId , postResponse , getEventUser , resPonsewithEventId}} >
     {children}
     </EventContext.Provider>
 )

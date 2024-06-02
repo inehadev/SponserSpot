@@ -112,12 +112,12 @@ export default function CreateEventPage () {
                 <select onChange={(e)=>{
                     setDomain(e.target.value)
                 }} className="w-[350px] rounded-md h-10 bg-zinc-800 bg-opacity-55 text-zinc-400 px-4" >
-                      <option className="bg-zinc-800 text-zinc-700"  value="Technical">Technical🍀</option>
-                     <option value="Sports">Sports💡</option>
-                        <option value="Academic">Academic 🚀</option>
-                        <option value="Non-Tech">Non technical 🚀</option>
-                        <option value="Esports">E Sports 🚀</option>
-                        <option value="Hackathon">Hackathon 🚀</option>
+                      <option className="bg-zinc-800 text-zinc-700"  value="Technical">Technical</option>
+                     <option value="Sports">Sports</option>
+                        <option value="Academic">Academic </option>
+                        <option value="Non-Tech">Non technical </option>
+                        <option value="Esports">E Sports </option>
+                        <option value="Hackathon">Hackathon </option>
 
     </select>
                     <input className="w-[350px] h-10 rounded-md bg-zinc-800 text-white px-3 bg-opacity-55 placeholder:text-zinc-400" type="text" placeholder="Expected Number of audience" onChange={(e)=>{

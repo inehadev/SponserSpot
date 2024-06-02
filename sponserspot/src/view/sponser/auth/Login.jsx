@@ -1,9 +1,10 @@
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../../../contexts/authContext";
+import { useNavigate } from "react-router-dom";
 
 export default function LoginPageForSponser (){
     const {loginForSponser} = useContext(AuthContext);
-
+     const navigate = useNavigate();
     const [email , setemail] = useState('');
     const [password , setpassowrd] = useState('');
 
@@ -11,6 +12,8 @@ export default function LoginPageForSponser (){
     const handleLogin = async (e)=>{
         e.preventDefault();
         await loginForSponser(email , password)
+        navigate('/organizer/dashboard');
+        
     }
 
 
@@ -19,8 +22,10 @@ export default function LoginPageForSponser (){
         <div className="min-h-screen w-full bg-zinc-950">
         <div className="flex" >
             {/* image section for login page */}
-            <div className="min-h-screen w-[650px] bg-zinc-800" >
-                <div className=" bg-white mx-4 my-4" ></div>
+            <div className="min-h-screen w-[650px]" >
+                <div className="" >
+                <img  className=" min-h-screen w-[650px] bg-transparent rounded-md  ml-8"  src="/sponsorRegister-.png"></img>
+                </div>
             </div>
 
 
@@ -64,7 +69,7 @@ export default function LoginPageForSponser (){
             </div>
 
 
-            <button className="w-full bg-purple-600 h-10 rounded-lg text-white" type="submit">Login</button>
+            <button className="w-full bg-purple-600 h-10 rounded-lg text-white" type="submit"> Login</button>
           <div className="w-full flex items-center justify-center">
           <p className="text-zinc-300">Don't have an account? <span className="text-purple-500" ><a href="/sponser/register">Register</a></span> </p>
           </div>

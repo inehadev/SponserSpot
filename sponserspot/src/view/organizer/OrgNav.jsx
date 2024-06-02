@@ -1,16 +1,11 @@
-import React from "react";
 
 
-export default function NavBar () {
+export const OrgNav = ()=>{
     return (
-        <>
+       
+             <>
         <div className="h-24 w-full bg-transparent flex items-center justify-between px-24">
-            {/* login */}
-
-
-
-
-            
+            {/* logog */}
             <div>
                 <h1 className="text-2xl font-semibold text-white" >SponserSpot</h1>
             </div>
@@ -19,7 +14,8 @@ export default function NavBar () {
             {/* main nav */}
             <div className="flex justify-center items-center gap-4 text-white" >
                 <p>Home</p>
-                <p>Events</p>
+                <p>Your Events</p>
+                <p>Event Responses</p>
                 <p>Sponsors</p>
             </div>
 
@@ -32,5 +28,7 @@ export default function NavBar () {
 
         </div>
         </>
+
     )
+
 }

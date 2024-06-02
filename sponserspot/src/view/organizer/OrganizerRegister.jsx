@@ -1,24 +1,27 @@
 import React, { useContext, useState } from "react"
 import { AuthContext } from "../../contexts/authContext";
+import { Link, useNavigate } from "react-router-dom";
 export const RegisterPageForOrganizer = ()=> {
    const{RegisterForOrganizer} = useContext(AuthContext);
-
+   const navigate = useNavigate();
     const[username,setusername] =useState("");
     const [email , setemail]=useState("");
     const[password,setpassowrd]=useState("");
     const[avtar,setavtar]=useState("");
 
     const handleRegister = async (e)=>{
+       
         e.preventDefault();
         await RegisterForOrganizer(username , email , password , avtar);
+        navigate('/organizer/login')
     }
     
     return (
         <div className="min-h-screen w-full bg-zinc-950">
             <div className="flex" >
-              
-                <div className="min-h-screen w-[650px] bg-zinc-800" >
-                <img src="eventregister.png" alt=" img" />
+               
+                <div className="min-h-screen w-[650px]" >
+               <img className="mt-20 ml-12" src="/eventregister.png" />
                     <div className=" bg-white mx-4 my-4" ></div>
                 </div>
 
@@ -45,6 +48,7 @@ export const RegisterPageForOrganizer = ()=> {
                     setusername(e.target.value)
                 }}></input>
                 </div>
+                
 
 
                 <div className="flex items-center gap-2 rounded-sm">
@@ -81,12 +85,13 @@ export const RegisterPageForOrganizer = ()=> {
 </svg>
 
                 </div>
-                <input className="w-[400px] h-10 px-2 text-zinc-500 rounded-md bg-zinc-800 border-[1px] border-zinc-700 " type="file " placeholder="avatar" onChange={(e)=>{
+                <input className="w-[400px] h-10 px-2 text-zinc-500 rounded-md   bg-zinc-800 border-[1px] border-zinc-700 
+                 " type="text" placeholder="avatar"  onChange={(e)=>{
                     setavtar(e.target.value)
                 }}></input>
                 </div>
 
-                <button  className="w-full bg-purple-600 h-10 rounded-lg text-white" type="submit">Register</button>
+                <button  className="w-full bg-purple-600 h-10 rounded-lg text-white" type="submit" >Register</button>
           <div className="w-full flex items-center justify-center">
           <p className="text-zinc-300">Already have an account? <span className="text-purple-500" ><a href="/organizer/login">Login</a></span> </p>
           </div>
