@@ -1,7 +1,22 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import NavBar from '../../../components/Navbar'
+import axios from 'axios';
 
 const AlllSponser = () => {
+    const [sponserData , setsponserData] = useState(null);
+
+    useEffect(()=>{
+        const getResponses =  async()=>{
+            const res = await axios.get("http://localhost:2000/get-sponser");
+            if(res){
+                console.log("Data Got", res);
+                setsponserData(res.data);
+            }else{
+                console.log(res);
+            }
+        }
+        getResponses();
+    } , [])
   return (
     <div className='h-screen w-full px-28 bg-stone-950' >
         <NavBar/>
