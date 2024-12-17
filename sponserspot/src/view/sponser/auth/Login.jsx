@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../../../contexts/authContext";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function LoginPageForSponser (){
     const {loginForSponser} = useContext(AuthContext);
@@ -69,7 +69,7 @@ export default function LoginPageForSponser (){
             </div>
 
 
-            <button className="w-full bg-purple-600 h-10 rounded-lg text-white" type="submit"> Login</button>
+            <button className="w-full bg-purple-600 h-10 rounded-lg text-white" type="submit"> <Link href ='/sponsor/dashboard'>Login</Link></button>
           <div className="w-full flex items-center justify-center">
           <p className="text-zinc-300">Don't have an account? <span className="text-purple-500" ><a href="/sponser/register">Register</a></span> </p>
           </div>

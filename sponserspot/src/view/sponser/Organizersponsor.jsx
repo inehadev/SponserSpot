@@ -101,7 +101,7 @@ export const Organizersponsor = () =>{
                 </div>
 
 
-                <h1 className="text-2xl text-zinc-200 font-semibold" >Explore Events</h1>
+                <h1 className="text-2xl text-zinc-200 font-semibold" >Explore Sponser</h1>
                 <p className="text-zinc-500">Get all of your events annd sponser them</p>
 
                 <div className="min-h-[300px]  bg-zinc-700 bg-opacity-20 rounded-md flex flex-col items-center   py-4 px-4">

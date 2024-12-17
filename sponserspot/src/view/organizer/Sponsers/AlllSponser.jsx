@@ -13,6 +13,7 @@ const AlllSponser = () => {
                 setsponserData(res.data);
             }else{
                 console.log(res);
+                
             }
         }
         getResponses();

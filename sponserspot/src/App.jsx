@@ -34,7 +34,7 @@ function App() {
       <Route path="/organizer/events/:id" element={<EventRes/>}/>
       <Route path="/sponsor/dashboard" element={<DashBOard/>}/>
       <Route path="/organizer/events" element={<OrgEvents/>}/>
-       <Route path="/organizer/dashboard" element={<SponsorDas/>}/> 
+      <Route path="/organizer/dashboard" element={<SponsorDas/>}/> 
       <Route path="/sponser/nav" element={<SponserNav/>}/>
       <Route path="/organizer/sponsor" element={<Organizersponsor/>}/>
       <Route path="/sponsers" element={<AlllSponser/>}/>
